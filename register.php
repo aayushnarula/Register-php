@@ -1,3 +1,12 @@
+<?php
+include_once("includes/classes/Account.php");
+ $account = new Account();
+ $account->register();
+ include_once("includes/handlers/register-handler.php");
+ include_once("includes/handlers/register-handler.php");
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,9 +26,18 @@
 			</p>
 				<button type="submit" name="loginButton">LOG IN</button>
 		</form>
+
 		<br><br>
+
+
+
 		<form id="registerForm" action="register.php" method="POST">
 			<h2>Create your free account</h2>
+
+			<p>
+				<label for="Username">Username</label>
+				<input id="Username" name="Username" type ="text" placeholder="Username" required>
+			</p>
 
 			<p>
 				<label for="firstName">First Name</label>
@@ -45,8 +63,9 @@
 				<label for="password2">Confirm Password</label>
 				<input id="password2" name="password2" type ="password" placeholder="Your Password" required>
 			</p>
-			<button type="submit" name="loginButton">Sign Up</button>	
+			<button type="submit" name="registerButton">Sign Up</button>	
 		</form>
+
 
 	</div>
 </body>
